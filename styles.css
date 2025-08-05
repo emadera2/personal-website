@@ -1,0 +1,479 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #FFFFFF;
+  color: #333333;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #AD002A;
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+header .logo {
+  height: 75px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 1em;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+}
+
+.intro-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 2em;
+}
+
+.intro-photo {
+  max-width: 100%;
+  height: auto;
+  width: 45%;
+  margin-right: 2%;
+  animation: popOut 1s ease forwards;
+}
+
+.intro-text {
+  width: 45%;
+  text-align: left;
+  animation: fadeIn 1s ease forwards;
+}
+
+.intro-text h2 {
+  margin-top: 0;
+  font-size: 2em;
+  color: #AD002A;
+}
+
+.photo-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+}
+
+.gallery-photo {
+  max-width: 30%;
+  height: auto;
+  margin: 10px;
+  opacity: 0;
+  animation: popOut 1s ease forwards;
+}
+
+.gallery-photo:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.gallery-photo:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+.gallery-photo:nth-child(3) {
+  animation-delay: 0.9s;
+}
+
+.gallery-photo:nth-child(4) {
+  animation-delay: 1.2s;
+}
+
+.gallery-photo:nth-child(5) {
+  animation-delay: 1.5s;
+}
+
+.gallery-photo:nth-child(6) {
+  animation-delay: 1.8s;
+}
+
+@keyframes popOut {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+footer {
+  background-color: #CCCCCC;
+  color: #333333;
+  text-align: center;
+  padding: 1em;
+  width: 100%;
+  position: relative;
+  margin-top: auto;
+}
+
+a {
+  color: #AD002A;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Add styles for contact information */
+.resume-section p a {
+  color: #AD002A;
+  text-decoration: none;
+}
+
+.resume-section p a:hover {
+  text-decoration: underline;
+}
+
+h3 {
+  margin-top: 1em;
+  color: #AD002A;
+}
+
+/* Additional styles for resume sections */
+.resume-section h2 {
+  color: #AD002A;
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.resume-section h3 {
+  color: #333333;
+  font-size: 1.2em;
+  margin: 1em 0 0.5em;
+}
+
+.resume-section p, .resume-section ul {
+  margin: 0.5em 0;
+}
+
+.resume-section ul {
+  list-style-type: disc;
+  padding-left: 1.5em;
+}
+
+.resume-section ul li {
+  margin-bottom: 0.5em;
+}
+
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* About page styles */
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2em 0;
+  padding: 1em;
+  border-bottom: 1px solid #ccc;
+}
+
+.about-text {
+  flex: 1;
+  padding-right: 1em;
+}
+
+.about-image {
+  flex: 1;
+  text-align: right;
+}
+
+.about-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: pop-in 0.5s ease forwards;
+  animation-delay: 0.5s;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.about-img:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+.about-section:nth-child(even) .about-text {
+  order: 2;
+  padding-left: 1em;
+  padding-right: 0;
+  text-align: left;
+}
+
+.about-section:nth-child(even) .about-image {
+  order: 1;
+  text-align: left;
+  padding-right: 1em;
+  padding-left: 0;
+}
+
+/* Hobbies section */
+.hobbies-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2em 0;
+  padding: 1em;
+}
+
+.hobbies-text {
+  flex: 1;
+  text-align: left;
+  padding-right: 2em;
+}
+
+.hobbies-images {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.hobbies-images img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: pop-in 0.5s ease forwards;
+  animation-delay: 0.5s;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hobbies-images img:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  overflow: hidden;
+}
+
+.carousel-img {
+  width: 100%;
+  display: none;
+  border-radius: 10px;
+}
+
+.carousel-img.active {
+  display: block;
+}
+
+.project-section {
+  margin: 2em 0;
+  padding: 1em;
+  border-bottom: 1px solid #ccc;
+}
+
+.project-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-content p {
+  flex: 1;
+  padding-right: 1em;
+}
+
+.project-img {
+  flex: 1;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  opacity: 0;
+  animation: fadeInOut 3s infinite;
+  animation-delay: 0.5s;
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+}
+
+.slideshow-img {
+  display: none;
+  width: 95%;
+  border-radius: 10px;
+}
+
+.slideshow-img.active {
+  display: block;
+  animation: fadeInOut 3s infinite;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .project-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-content, .slideshow-container {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+/* Custom Banner Header Layout */
+.org-banner {
+  background-color: #AD002A;
+  color: white;
+  padding: 1.5em 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+/* Left + Right org logos */
+.org-side {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.org-icon {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+  margin: 0 5px;
+}
+.org-icon:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+  .org-banner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .org-side {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 0;
+  }
+
+  .org-icon {
+    height: 40px;
+    margin: 10px;
+  }
+}
+
+
+/* Center logo and nav layout */
+.org-center {
+  flex: 1 1 300px;
+}
+
+.org-center .logo {
+  height: 75px;
+  margin-bottom: 0.5em;
+}
+
+.org-center h1 {
+  margin: 0;
+  font-size: 1.8em;
+}
+
+/* Navigation styles */
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.5em;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+  .org-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .org-side {
+    justify-content: center;
+    margin: 0.5em 0;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+}
