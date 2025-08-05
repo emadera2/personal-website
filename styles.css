@@ -89,48 +89,21 @@ main {
   animation: popOut 1s ease forwards;
 }
 
-.gallery-photo:nth-child(1) {
-  animation-delay: 0.3s;
-}
-
-.gallery-photo:nth-child(2) {
-  animation-delay: 0.6s;
-}
-
-.gallery-photo:nth-child(3) {
-  animation-delay: 0.9s;
-}
-
-.gallery-photo:nth-child(4) {
-  animation-delay: 1.2s;
-}
-
-.gallery-photo:nth-child(5) {
-  animation-delay: 1.5s;
-}
-
-.gallery-photo:nth-child(6) {
-  animation-delay: 1.8s;
-}
+.gallery-photo:nth-child(1) { animation-delay: 0.3s; }
+.gallery-photo:nth-child(2) { animation-delay: 0.6s; }
+.gallery-photo:nth-child(3) { animation-delay: 0.9s; }
+.gallery-photo:nth-child(4) { animation-delay: 1.2s; }
+.gallery-photo:nth-child(5) { animation-delay: 1.5s; }
+.gallery-photo:nth-child(6) { animation-delay: 1.8s; }
 
 @keyframes popOut {
-  from {
-    transform: scale(0.95);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 footer {
@@ -152,7 +125,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Add styles for contact information */
 .resume-section p a {
   color: #AD002A;
   text-decoration: none;
@@ -167,7 +139,6 @@ h3 {
   color: #AD002A;
 }
 
-/* Additional styles for resume sections */
 .resume-section h2 {
   color: #AD002A;
   font-size: 1.5em;
@@ -194,17 +165,10 @@ h3 {
 }
 
 @keyframes pop-in {
-  0% {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
 }
 
-/* About page styles */
 .about-section {
   display: flex;
   align-items: center;
@@ -254,7 +218,6 @@ h3 {
   padding-left: 0;
 }
 
-/* Hobbies section */
 .hobbies-section {
   display: flex;
   align-items: center;
@@ -353,28 +316,10 @@ h3 {
 }
 
 @keyframes fadeInOut {
-  0%, 100% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
 }
 
-/* Media queries */
-@media (max-width: 768px) {
-  .project-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .text-content, .slideshow-container {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-/* Custom Banner Header Layout */
 .org-banner {
   background-color: #AD002A;
   color: white;
@@ -386,7 +331,6 @@ h3 {
   text-align: center;
 }
 
-/* Left + Right org logos */
 .org-side {
   display: flex;
   gap: 15px;
@@ -399,33 +343,13 @@ h3 {
   object-fit: contain;
   margin: 0 5px;
 }
+
 .org-icon:hover {
   transform: scale(1.05);
   transition: transform 0.3s ease;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
-
-@media (max-width: 768px) {
-  .org-banner {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .org-side {
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 10px 0;
-  }
-
-  .org-icon {
-    height: 40px;
-    margin: 10px;
-  }
-}
-
-
-/* Center logo and nav layout */
 .org-center {
   flex: 1 1 300px;
 }
@@ -440,7 +364,6 @@ h3 {
   font-size: 1.8em;
 }
 
-/* Navigation styles */
 .nav-links {
   list-style: none;
   padding: 0;
@@ -462,19 +385,68 @@ h3 {
   text-decoration: underline;
 }
 
-/* Responsive fixes */
-@media (max-width: 768px) {
-  .org-banner {
+.container {
+  width: 90%;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .intro-section,
+  .project-content,
+  .about-section,
+  .hobbies-section {
     flex-direction: column;
     text-align: center;
   }
 
-  .org-side {
-    justify-content: center;
-    margin: 0.5em 0;
+  .intro-photo,
+  .intro-text,
+  .about-text,
+  .about-image,
+  .hobbies-text,
+  .hobbies-images,
+  .project-content p,
+  .project-img {
+    width: 100%;
+    padding: 0;
+    margin: 1em 0;
+    text-align: center;
+  }
+
+  .gallery-photo {
+    max-width: 90%;
+  }
+
+  .org-banner,
+  .org-side,
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .org-icon {
+    height: 40px;
+    margin: 10px;
   }
 
   .nav-links {
     gap: 20px;
+  }
+
+  .org-center h1 {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1, h2 {
+    font-size: 1.4em;
+  }
+  h3 {
+    font-size: 1.2em;
+  }
+  p, li {
+    font-size: 1em;
   }
 }
